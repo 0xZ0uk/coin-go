@@ -29,6 +29,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      crypto-random:
+        specifier: ^2.0.1
+        version: 2.0.1
       eruda:
         specifier: ^3.0.1
         version: 3.0.1
@@ -1004,6 +1007,10 @@ packages:
   cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
+
+  crypto-random@2.0.1:
+    resolution: {integrity: sha512-MTag9YM+VySFM+eEitCBQy6aCBxlhIeFnQZAm6e6Rnfnn3dEXG2G0xbPyV/YQI0MmW1AgG0JfG/urp7nwbyDEg==}
+    engines: {node: '>=14.0.0'}
 
   cssesc@3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -3069,6 +3076,8 @@ snapshots:
       path-key: 3.1.1
       shebang-command: 2.0.0
       which: 2.0.2
+
+  crypto-random@2.0.1: {}
 
   cssesc@3.0.0: {}
 

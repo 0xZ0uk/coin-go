@@ -21,6 +21,7 @@
     "@tonconnect/ui-react": "^2.0.5",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "crypto-random": "^2.0.1",
     "eruda": "^3.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
