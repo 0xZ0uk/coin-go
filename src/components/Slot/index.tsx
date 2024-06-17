@@ -36,14 +36,14 @@ const symbols = [
 export const Slot: React.FC = () => {
   const { publicSeed, privateSeed } = useSlotMachine();
 
-  const [spinner1, setSpinner1] = React.useState<string[]>([]);
-  const [spinner2, setSpinner2] = React.useState<string[]>([]);
-  const [spinner3, setSpinner3] = React.useState<string[]>([]);
+  const [spinners, setSpinners] = React.useState<string[][]>([]);
 
   React.useEffect(() => {
-    setSpinner1(seededDurstenfeldShuffle(symbols, privateSeed, publicSeed));
-    setSpinner2(seededDurstenfeldShuffle(symbols, privateSeed, publicSeed));
-    setSpinner3(seededDurstenfeldShuffle(symbols, privateSeed, publicSeed));
+    setSpinners([
+      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
+      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
+      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
+    ]);
   }, [publicSeed, privateSeed]);
 
   React.useEffect(() => {
@@ -52,9 +52,9 @@ export const Slot: React.FC = () => {
 
   return (
     <div className="flex p-4 rounded-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
-      <Spinner symbols={spinner1} />
-      <Spinner symbols={spinner2} />
-      <Spinner symbols={spinner3} />
+      <Spinner symbols={spinners[0]} />
+      <Spinner symbols={spinners[1]} />
+      <Spinner symbols={spinners[2]} />
     </div>
   );
 };
