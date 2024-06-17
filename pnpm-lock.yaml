@@ -44,6 +44,9 @@ importers:
       react-router-dom:
         specifier: ^6.23.0
         version: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      squares-rng:
+        specifier: ^2.0.1
+        version: 2.0.1
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -1952,6 +1955,10 @@ packages:
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
+
+  squares-rng@2.0.1:
+    resolution: {integrity: sha512-1sSJuUxME1SvP3EtR7OmmeGCAW+c9i1eAfLcVhLpKpBqz0R9aXucwHq3TbtZo49QtblwF2EWcWXyp66ifD/Jcw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -4137,6 +4144,8 @@ snapshots:
   slash@3.0.0: {}
 
   source-map-js@1.2.0: {}
+
+  squares-rng@2.0.1: {}
 
   string-width@4.2.3:
     dependencies:
