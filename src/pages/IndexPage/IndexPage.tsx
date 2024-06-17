@@ -1,42 +1,17 @@
-import { Section, Cell, Image, List } from '@telegram-apps/telegram-ui';
-import type { FC } from 'react';
-
-import { Link } from '@/components/Link/Link.tsx';
-
-import tonSvg from './ton.svg';
-
-import './IndexPage.css';
+import type { FC } from "react";
+import { AppMenu } from "@/components/AppMenu";
+import { Slot } from "@/components/Slot";
 
 export const IndexPage: FC = () => {
   return (
-    <List>
-      <Section
-        header='Features'
-        footer='You can use these pages to learn more about features, provided by Telegram Mini Apps and other useful projects'
-      >
-        <Link to='/ton-connect'>
-          <Cell
-            before={<Image src={tonSvg} style={{ backgroundColor: '#007AFF' }}/>}
-            subtitle='Connect your TON wallet'
-          >
-            TON Connect
-          </Cell>
-        </Link>
-      </Section>
-      <Section
-        header='Application Launch Data'
-        footer='These pages help developer to learn more about current launch information'
-      >
-        <Link to='/init-data'>
-          <Cell subtitle='User data, chat information, technical data'>Init Data</Cell>
-        </Link>
-        <Link to='/launch-params'>
-          <Cell subtitle='Platform identifier, Mini Apps version, etc.'>Launch Parameters</Cell>
-        </Link>
-        <Link to='/theme-params'>
-          <Cell subtitle='Telegram application palette information'>Theme Parameters</Cell>
-        </Link>
-      </Section>
-    </List>
+    <div className="flex flex-col justify-between">
+      <header className="bg-gradient-to-b h-12 flex items-center justify-center from-[#563226] to-[#331c17] border-b">
+        <h1>Welcome to CoinGo</h1>
+      </header>
+      <main className="h-[calc(100vh-7rem)] bg-gradient-to-b from-blue-300 to-blue-400 flex items-center justify-cente p-8">
+        <Slot />
+      </main>
+      <AppMenu />
+    </div>
   );
 };
