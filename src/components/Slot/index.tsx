@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Spinner } from "./Spinner";
-import { seededDurstenfeldShuffle } from "@/utils/array";
 import { useSlotMachine } from "@/hooks/useSlotMachine";
+import { seededDurstenfeldShuffle } from "@/utils/array";
 
-const symbols = [
+const symbols: string[] = [
   "angry_horns",
   "angry",
   "anguished",
@@ -36,25 +36,27 @@ const symbols = [
 export const Slot: React.FC = () => {
   const { publicSeed, privateSeed } = useSlotMachine();
 
-  const [spinners, setSpinners] = React.useState<string[][]>([]);
+  const [spinner1Symbols, setSpinner1Symbols] = React.useState<string[]>([]);
+  const [spinner2Symbols, setSpinner2Symbols] = React.useState<string[]>([]);
+  const [spinner3Symbols, setSpinner3Symbols] = React.useState<string[]>([]);
 
   React.useEffect(() => {
-    setSpinners([
-      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
-      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
-      seededDurstenfeldShuffle(symbols, privateSeed, publicSeed),
-    ]);
-  }, [publicSeed, privateSeed]);
-
-  React.useEffect(() => {
-    console.log(publicSeed, privateSeed);
+    setSpinner1Symbols(
+      seededDurstenfeldShuffle([...symbols], privateSeed, publicSeed)
+    );
+    setSpinner2Symbols(
+      seededDurstenfeldShuffle([...symbols], privateSeed + 1, publicSeed + 1)
+    );
+    setSpinner3Symbols(
+      seededDurstenfeldShuffle([...symbols], privateSeed + 2, publicSeed + 2)
+    );
   }, [publicSeed, privateSeed]);
 
   return (
     <div className="flex p-4 rounded-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
-      <Spinner symbols={spinners[0]} />
-      <Spinner symbols={spinners[1]} />
-      <Spinner symbols={spinners[2]} />
+      <Spinner symbols={spinner1Symbols} />
+      <Spinner symbols={spinner2Symbols} />
+      <Spinner symbols={spinner3Symbols} />
     </div>
   );
 };
