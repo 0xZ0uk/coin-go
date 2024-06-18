@@ -25,12 +25,6 @@ const symbols: string[] = [
   "exploding",
   "expressionless",
   "grinning",
-  "melting",
-  "open_eyes",
-  "robot",
-  "rofl",
-  "savory",
-  "sweat",
 ];
 
 export const Slot: React.FC = () => {

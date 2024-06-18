@@ -27,7 +27,7 @@ export const Spinner: React.FC<SpinnerProps> = ({
         {symbols.map((symbol, index) => (
           <SpinnerItem key={index}>
             <Image
-              src={`/twa/emojis/${symbol}.svg`}
+              src={`/coin-go/emojis/${symbol}.svg`}
               size={48}
               alt={symbol}
               className="bg-transparent"
