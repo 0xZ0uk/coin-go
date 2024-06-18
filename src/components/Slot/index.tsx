@@ -34,7 +34,7 @@ const symbols: string[] = [
 ];
 
 export const Slot: React.FC = () => {
-  const { publicSeed, privateSeed } = useSlotMachine();
+  const { publicSeed, privateSeed, spinning } = useSlotMachine();
 
   const [spinner1Symbols, setSpinner1Symbols] = React.useState<string[]>([]);
   const [spinner2Symbols, setSpinner2Symbols] = React.useState<string[]>([]);
@@ -54,9 +54,9 @@ export const Slot: React.FC = () => {
 
   return (
     <div className="flex p-4 rounded-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
-      <Spinner symbols={spinner1Symbols} />
-      <Spinner symbols={spinner2Symbols} />
-      <Spinner symbols={spinner3Symbols} />
+      <Spinner symbols={spinner1Symbols} spinning={spinning} />
+      <Spinner symbols={spinner2Symbols} spinning={spinning} />
+      <Spinner symbols={spinner3Symbols} spinning={spinning} />
     </div>
   );
 };

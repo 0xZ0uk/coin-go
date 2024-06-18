@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    animation: {
+      "slot-spin": "slotAnimate 3s infinite",
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -42,6 +45,16 @@ export default {
         lg: `var(--radius)`,
         md: `calc(var(--radius) - 2px)`,
         sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        slotAnimate: {
+          "0%": {
+            transform: "translateY(-50%)",
+          },
+          "100%": {
+            transform: "translateY(0%)",
+          },
+        },
       },
     },
   },
