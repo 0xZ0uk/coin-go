@@ -6,7 +6,7 @@ export const Spin: FC = () => {
 
   return (
     <button
-      className=" w-full h-full p-2 relative -top-8 rounded-t-md group active:translate-y-4 disabled:translate-y-4 transition-all"
+      className="w-full h-[90%] p-2 relative -top-14 rounded-t-md group active:translate-y-4 disabled:translate-y-4 transition-all"
       onClick={() => spin()}
       disabled={spinning || energy === 0}
     >
