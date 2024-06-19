@@ -39,5 +39,8 @@ export const seededDurstenfeldShuffle = <T>(
     array[j] = temp;
   }
 
-  return array;
+  // Filter undefined
+  const filteredArray = array.filter((item) => item !== undefined);
+
+  return filteredArray;
 };

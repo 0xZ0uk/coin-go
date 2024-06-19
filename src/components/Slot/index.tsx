@@ -46,11 +46,29 @@ export const Slot: React.FC = () => {
     );
   }, [publicSeed, privateSeed]);
 
+  React.useEffect(() => {
+    console.log(spinner1Symbols[1], spinner2Symbols[1], spinner3Symbols[1]);
+  }, [spinner1Symbols, spinner2Symbols, spinner3Symbols]);
+
   return (
-    <div className="flex p-4 rounded-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
-      <Spinner symbols={spinner1Symbols} spinning={spinning} />
-      <Spinner symbols={spinner2Symbols} spinning={spinning} />
-      <Spinner symbols={spinner3Symbols} spinning={spinning} />
+    <div className="flex flex-col items-center justify-center gap-8">
+      <div>
+        <p>Result</p>
+        <div className="flex gap-2">
+          {spinner1Symbols[1] === spinner2Symbols[1] &&
+          spinner1Symbols[1] === spinner3Symbols[1] &&
+          spinner2Symbols[1] === spinner3Symbols[1] ? (
+            <p>You win</p>
+          ) : (
+            <p>You lose</p>
+          )}
+        </div>
+      </div>
+      <div className="grid grid-cols-3 p-4 rounded-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
+        <Spinner symbols={spinner1Symbols} spinning={spinning} />
+        <Spinner symbols={spinner2Symbols} spinning={spinning} />
+        <Spinner symbols={spinner3Symbols} spinning={spinning} />
+      </div>
     </div>
   );
 };

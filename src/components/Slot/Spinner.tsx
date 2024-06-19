@@ -14,13 +14,13 @@ export const Spinner: React.FC<SpinnerProps> = ({
   return (
     <div
       className={cn(
-        "basis-1/3 w-full bg-[#ffecd6] h-fit max-h-[19rem] overflow-x-hidden relative rounded-md flex flex-col gap-2 p-2"
+        "basis-1/3 w-full bg-[#ffecd6] pointer-events-none h-[18rem] overflow-hidden relative rounded-md flex flex-col gap-2 p-2"
       )}
     >
       <div className="absolute left-0 transition-all top-0 z-20 w-full rounded-md h-full bg-gradient-to-b from-background/40 from-5% via-50% via-transparent to-95% to-background/40"></div>
       <div
         className={cn(
-          "flex flex-wrap items-center justify-center gap-2 w-full",
+          "flex flex-wrap items-center appearance-none pointer-events-none justify-center gap-2 w-full",
           spinning ? "animate-slot-spin" : ""
         )}
       >
