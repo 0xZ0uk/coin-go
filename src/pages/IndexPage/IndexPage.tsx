@@ -16,7 +16,7 @@ export const IndexPage: FC = () => {
           <p className="text-lg">{score}</p>
         </div>
       </header>
-      <main className="h-[calc(100vh-9rem)] bg-gradient-to-b from-blue-300 to-blue-400 flex items-center justify-cente p-8">
+      <main className="h-[calc(100vh-10rem)] bg-gradient-to-b from-blue-300 to-blue-400 flex items-center justify-cente p-8">
         <Slot />
       </main>
       <AppMenu />

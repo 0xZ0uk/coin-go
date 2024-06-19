@@ -5,7 +5,7 @@ import { Spin } from "./Slot/Spin";
 
 export const AppMenu: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-b h-24 from-[#563226] to-[#331c17] flex items-start z-50">
+    <footer className="bg-gradient-to-b h-28 from-[#563226] to-[#331c17] flex items-start z-50">
       <div className="w-full basis-1/6 border-r flex flex-col items-center justify-center border-[#ac6b26] text-[#ac6b26] pt-2">
         <BsCoin className="h-8 w-8" />
         <p className="text-sm">Play</p>
