@@ -19,8 +19,8 @@ export const useSlotMachine = create<SlotMachineState>()(
     publicSeed: generateSeed(),
     privateSeed: generateSeed(),
     spinning: false,
-    energy: 100, // set to 0 on production
-    maxEnergy: 100,
+    energy: 30, // set to 0 on production
+    maxEnergy: 30,
     score: 0,
     setScore: (score) => set((state) => ({ ...state, score: score })),
     spin: () => {

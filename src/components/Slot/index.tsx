@@ -67,13 +67,13 @@ export const Slot: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 p-4 rounded-b-lg bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
+        <div className="grid grid-cols-3 p-4 bg-gradient-to-b from-[#563226] to-[#331c17] w-full gap-2">
           <Spinner symbols={spinner1Symbols} spinning={spinning} />
           <Spinner symbols={spinner2Symbols} spinning={spinning} />
           <Spinner symbols={spinner3Symbols} spinning={spinning} />
         </div>
+        <EnergyBar />
       </div>
-      <EnergyBar />
     </div>
   );
 };
